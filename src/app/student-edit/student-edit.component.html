@@ -1,0 +1,17 @@
+<div *ngIf="student && index">
+  <form (ngSumbit)="onSave(student, index)">
+    <input
+      name="firstname"
+      [(ngModel)]="student.firstname"
+      placeholder="firstname"
+    />
+    <input
+      name="lastname"
+      [(ngModel)]="student.lastname"
+      placeholder="lastname"
+    />
+    <input name="email" [(ngModel)]="student.email" placeholder="email" />
+    <input name="age" [(ngModel)]="student.age" placeholder="age" />
+    <button (click)="onSave(student, index)">Save</button>
+  </form>
+</div>
